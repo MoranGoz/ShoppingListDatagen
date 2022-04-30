@@ -8,7 +8,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </template>
 
 <style>
-@import '@/assets/base.css';
+@import '../src/assets/base.css';
 
 #app {
   max-width: 1280px;
@@ -16,6 +16,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
   padding: 2rem;
 
   font-weight: normal;
+  font-family: 'Montserrat Alternates';
 }
 
 header {

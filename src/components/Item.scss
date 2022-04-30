@@ -1,0 +1,49 @@
+.item{
+  width: 100%;
+  display: flex;
+  height: 64px;
+  padding-top: 16px;
+  border-bottom: 1px solid #E3E3E5;
+  font-size: 15px;
+  .index{
+    font-size: 24px;
+    font-weight: bold;
+    width: 17% ;
+    color: #FF941A;
+    border-right: 1px solid #E3E3E5;
+    display: flex;
+    justify-content: center;
+  }
+  .name{
+    width: 45% ;
+    padding-left: 16px;
+    display: flex;
+    text-align: left;
+    margin: auto;
+  }
+  .info{
+    display: flex;
+    .price{
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .currency{
+      margin:auto 5px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .options-buttons{
+    display: flex;
+    .icon-button{
+      height: 100%;
+      width: 100%;
+      padding: 14px;
+      .icon{
+        margin: auto;
+      }
+    }
+
+  }
+}

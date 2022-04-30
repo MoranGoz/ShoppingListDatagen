@@ -1,0 +1,13 @@
+.shopping-list-page{
+  .title{
+    font-size: 20px;
+    font-family: 'Montserrat Alternates';
+    font-weight: 700;
+    margin:  35px auto;
+    display: flex;
+    justify-content: center;
+  }
+  .list{
+    overflow: scroll;
+  }
+}
