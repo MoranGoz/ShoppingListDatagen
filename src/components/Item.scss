@@ -8,14 +8,14 @@
   .index{
     font-size: 24px;
     font-weight: bold;
-    width: 17% ;
+    width: 55px;
     color: #FF941A;
     border-right: 1px solid #E3E3E5;
     display: flex;
     justify-content: center;
   }
   .name{
-    width: 45% ;
+    width: 145px ;
     padding-left: 16px;
     display: flex;
     text-align: left;
@@ -36,6 +36,7 @@
   }
   .options-buttons{
     display: flex;
+    // visibility: hidden;
     .icon-button{
       height: 100%;
       width: 100%;
@@ -45,5 +46,18 @@
       }
     }
 
+  }
+}
+
+.inactive{
+  .name, .info{
+    opacity: 0.50;
+    text-decoration: line-through;
+  }
+}
+
+.item:focus {
+  .icon-button {
+    visibility: visible;
   }
 }

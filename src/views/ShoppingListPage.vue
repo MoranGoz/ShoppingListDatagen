@@ -1,14 +1,21 @@
 <template>
   <div class="shopping-list-page">
     <div class="title">Shopping List</div>
-    <div class="list">
-      <Item v-for="item in list" :item="item" :key="item.id"/>
-    </div>
-    <div class="total">
+    <div class="content">
+      <div class="list">
+        <Item v-for="item in list" :item="item" :key="item.id"/>
+      </div>
+      <div class="total">
+        <div class="label">Total :</div>
+        <div>{{ `${totalCost} Nis` }}</div>
+      </div>
+      <div class="add-item-button">
+        <div class="icon-wrapper">
+          <img class="icon" src="../assets/svg/add.svg">
+        </div>
+        <div class="text">Add Product</div>
 
-    </div>
-    <div class="add-item-button">
-
+      </div>
     </div>
   </div>
 </template>
@@ -23,8 +30,12 @@ import ItemsList from "@/entities/mocks/ItemsListMock";
 export default {
   components: {IconButton, Item},
   computed:{
-    list: function (): ItemType[] {
+    list(): ItemType[] {
       return ItemsList
+    },
+    totalCost () :number{
+      const test = ItemsList.reduce((total: number, item: ItemType) => item.price + total, 0)
+      return test
     }
   }
 

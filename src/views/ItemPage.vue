@@ -2,6 +2,9 @@
   <div class="about">
     <h1>This is an about page</h1>
   </div>
+  <div class="header">
+    <img src="src/assets/svg/edit.svg">
+  </div>
 </template>
 
 <style>

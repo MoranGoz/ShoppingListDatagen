@@ -7,7 +7,39 @@
     display: flex;
     justify-content: center;
   }
+  .content{
+    font-family: inter;
+
   .list{
     overflow: scroll;
   }
+  .total{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 70px;
+    .label{
+      margin: 0 5px;
+    }
+  }
+
+  .add-item-button{
+    color: #FF941A;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    .icon-wrapper{
+      width: 55px;
+      display: flex;
+      justify-content: center;
+      .icon{
+        height: 24px;
+        width: 24px;
+      }
+    }
+    .text{
+      padding-left: 16px;
+    }
+  }
+  }
+
 }
