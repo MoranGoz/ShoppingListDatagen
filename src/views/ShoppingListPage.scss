@@ -1,5 +1,8 @@
 .shopping-list-page{
-  .title{
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+    .title{
     font-size: 20px;
     font-family: 'Montserrat Alternates';
     font-weight: 700;
@@ -17,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     padding: 16px 70px;
+    height: 64px;
     .label{
       margin: 0 5px;
     }
@@ -41,5 +45,17 @@
     }
   }
   }
+  .self-component{
+    animation-name: rotate;
+    animation-duration: 0.5s;
+  }
+}
 
+@keyframes rotate {
+  0% {
+    bottom: -280px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }

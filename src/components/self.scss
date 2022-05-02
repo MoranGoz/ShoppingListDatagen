@@ -1,0 +1,43 @@
+.self{
+  height: 50vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 18px 13px 18px 0;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+  .header{
+    display: flex;
+    justify-content: space-between;
+    .info{
+      display: flex;
+      .input{
+        border: none;
+        border-bottom: 1px solid #E3E3E5;
+        margin-right: 15px;
+        padding: 20px;
+      }
+    }
+  }
+  .content{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    .textarea{
+      width: 100%;
+      height: 100%;
+      border: none;
+      padding: 20px;
+      margin-top: 15px;
+    }
+    .button{
+      display: flex;
+      width: 20px;
+      align-items: center;
+      height: 100%;
+      right: 0
+    }
+  }
+}
+

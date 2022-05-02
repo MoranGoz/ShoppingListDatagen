@@ -16,4 +16,4 @@ export default {
 
 
 
-<style src="./Item.scss" lang="scss" />
+<style src="ItemComponent.scss" lang="scss" />
