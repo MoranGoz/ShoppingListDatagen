@@ -8,10 +8,10 @@
     </div>
     <div class="options-buttons">
       <div class="icon-button" @click="onEditItem()">
-        <img src="../assets/svg/edit.svg">
+        <img src="../../assets/svg/edit.svg">
       </div>
       <div class="icon-button" @click="onDeleteItemClick()">
-        <img src="../assets/svg/remove.svg">
+        <img src="../../assets/svg/remove.svg">
       </div>
     </div>
   </div>
@@ -21,13 +21,14 @@
 <script lang="ts">
 
 import router from "@/router";
+import Item from "@/entities/type/item";
 
 export default {
   name: 'ItemComponent',
   emits: ["toggleIsIsActive", "deleteItem", "navigateToItemPage"],
   props: {
     item: {
-      type: Object,
+      type: Item,
       required: true
     },
     index: {
@@ -46,11 +47,9 @@ export default {
       router.push({name: 'ItemPage', params: {id: this.item.id}});
     },
     onEditItem() {
-      console.log('onEditItem', this.item.id);
       this.$emit("toggleIsIsActive", this.item.id)
     },
     onDeleteItemClick() {
-      console.log('onDeleteItemClick', this.item.id);
       this.$emit("deleteItem", this.item.id)
     }
   }

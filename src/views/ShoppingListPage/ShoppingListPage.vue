@@ -18,7 +18,7 @@
       </div>
       <div class="add-item-button" @click="openSelf()">
         <div class="icon-wrapper">
-          <img class="icon" src="../assets/svg/add.svg">
+          <img class="icon" src="../../assets/svg/add.svg">
         </div>
         <div class="text">Add Product</div>
       </div>
@@ -33,10 +33,10 @@
 
 
 <script lang="ts">
-import IconButton from "/src/components/IconButton.vue";
+import IconButton from "/src/components/IconButton/IconButton.vue";
 import Item from "/src/entities/type/item";
-import Self from "/src/components/self.vue";
-import ItemComponent from "/src/components/ItemComponent.vue";
+import Self from "/src/components/self/self.vue";
+import ItemComponent from "/src/components/ItemComponents/ItemComponent.vue";
 
 export default {
   components: {ItemComponent, Self, IconButton},
@@ -64,15 +64,12 @@ export default {
       this.isSelfOpen = true;
     },
     closeSelf() {
-      console.log(" closeSelf close");
       this.isSelfOpen = false;
     },
     addItem(name: string, price: number, description: string) {
-      this.currentId = this.currentId+1;
+      this.currentId = this.currentId + 1;
       const newItem = new Item(this.currentId, name, price, description)
-      console.log("newItem", newItem)
       this.itemsList.push(newItem)
-      console.log("addItem", name, price, description)
     },
     findIndexById(id: number) {
       return this.itemsList.findIndex(item => item.id === id)
@@ -87,9 +84,8 @@ export default {
     deleteItem(id: number) {
       const index = this.findIndexById(id);
       if (index !== -1) {
-        this.itemsList.splice(index,1)
+        this.itemsList.splice(index, 1)
       }
-      console.log("after deleted",this.itemsList);
       return;
     }
   }
